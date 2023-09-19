@@ -1,0 +1,122 @@
+
+.component-background {
+  background-image: url('../../assets/bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+app-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+  
+  .view-orders-button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .view-orders-button:hover {
+    background-color: #0056b3; 
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details {
+    padding: 20px;
+  }
+  
+  mat-card {
+    width: 100%;
+  }
+  
+  mat-card-content {
+    padding: 0;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-label {
+    font-size: 16px;
+  }
+  
+  input[type="number"] {
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; 
+  }
+  
+  .create{
+    font-weight: bold;
+  }

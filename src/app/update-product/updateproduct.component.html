@@ -1,0 +1,16 @@
+<h2 mat-dialog-title class="dialog-title">Update Price</h2>
+<div mat-dialog-content>
+  <form [formGroup]="data.form" (ngSubmit)="onSubmit(data.form)">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>New Price</mat-label>
+      <input matInput type="number" placeholder="Enter new price" formControlName="price" required>
+      <mat-error *ngIf="data.form.controls.price.hasError('required')" class="error-message">Price is required</mat-error>
+      <mat-error *ngIf="data.form.controls.price.hasError('min')" class="error-message">Price must be greater than zero</mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+    <button mat-button class="submit-button" color="primary" (click)="onSubmit(data.form)">Submit</button>
+    <button mat-button class="cancel-button" (click)="dialogRef.close()">Cancel</button>
+  </div>
+  

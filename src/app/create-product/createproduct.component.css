@@ -1,0 +1,87 @@
+/* Center the content within the background */
+.component-background {
+  background-image: url('../../assets/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.home-icon {
+  font-size: 32px;
+  float: right;
+  cursor: pointer;
+  color: rgb(236, 221, 149);
+  align-items: end;
+  justify-content: end;
+  align-self: end;
+  padding-right: 30px;
+}
+
+.create-product {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the form content */
+}
+
+/* Style the form title */
+.create-product h2 {
+  color: #007bff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.mat-form-field-label {
+  color: #007bff;
+  font-size: 18px;
+}
+
+.mat-input-element {
+  font-size: 16px;
+}
+
+
+.mat-error {
+  font-size: 14px;
+  color: #dc3545;
+  margin-top: 4px;
+}
+
+app-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+button[type="submit"] {
+  background-color: #1eff00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

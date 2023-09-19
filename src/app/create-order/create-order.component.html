@@ -1,0 +1,28 @@
+<div class="component-background">
+    <app-header></app-header>
+    <button mat-button color="primary" class="view-orders-button" [routerLink]="['/myorders']">View My Orders</button>
+  
+    <form [formGroup]="orderForm" (ngSubmit)="submitOrder()">
+
+      <div class="product-grid">
+        <div *ngFor="let product of products; let i = index" class="product-item">
+          <div class="product-details">
+            <mat-card>
+              <mat-card-content>
+                <h3>{{ product.productName }}</h3>
+                <p>{{ product.description }}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <mat-form-field appearance="fill">
+                  <mat-label>Quantity</mat-label>
+                  <input matInput [formControl]="quantityControls[i]" type="number" placeholder="Quantity">
+                </mat-form-field>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <button mat-raised-button color="primary" type="submit" class="create">Create Order</button>
+    </form>
+  </div>
+  

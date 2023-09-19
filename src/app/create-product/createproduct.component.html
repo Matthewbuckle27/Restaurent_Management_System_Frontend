@@ -1,0 +1,43 @@
+<div class="component-background">
+  <app-header></app-header>
+  <mat-icon class="home-icon" (click)="goToDashboardPage()">home</mat-icon>
+  <div class="create-product">
+    <h2>Add new Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Product Name</mat-label>
+          <input matInput formControlName="productName" required />
+          <mat-error *ngIf="productForm?.get('productName')?.hasError('required')">
+            Product Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Product Description</mat-label>
+          <textarea matInput formControlName="description" required></textarea>
+          <mat-error *ngIf="productForm?.get('description')?.hasError('required')">
+            Product Description is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Product Price</mat-label>
+          <input matInput type="number" formControlName="price" required />
+          <mat-error *ngIf="productForm?.get('price')?.hasError('required')">
+            Product Price is required
+          </mat-error>
+          <mat-error *ngIf="productForm?.get('price')?.hasError('min')">
+            Price must be greater than zero
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="primary" type="submit">Create Product</button>
+    </form>
+  </div>
+</div>

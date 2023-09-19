@@ -1,0 +1,33 @@
+<div class="component-background">
+    <app-header></app-header>
+    <mat-icon class="home-icon" (click)="goToCreateOrderPage()">home</mat-icon>
+    <h2 class="orders-heading">My Orders</h2>
+  
+    <mat-table class="orders-table mat-elevation-z8" [dataSource]="dataSource">
+      <ng-container matColumnDef="orderId">
+        <mat-header-cell *matHeaderCellDef> Order ID </mat-header-cell>
+        <mat-cell *matCellDef="let order"> {{ order.orderId }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="orderDate">
+        <mat-header-cell *matHeaderCellDef> Order Date </mat-header-cell>
+        <mat-cell *matCellDef="let order"> {{ order.orderDate | date: 'medium' }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="totalPrice">
+        <mat-header-cell *matHeaderCellDef> Total Price (Rs.) </mat-header-cell>
+        <mat-cell *matCellDef="let order"> Rs. {{ order.totalPrice }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let order"> {{ mapOrderStatus(order.status) }} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </div>
+  
